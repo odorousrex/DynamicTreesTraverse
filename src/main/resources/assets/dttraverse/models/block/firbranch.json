@@ -1,0 +1,7 @@
+{
+	"parent": "dynamictrees:block/smartmodel/branch",
+	"textures": {
+		"bark": "traverse:block/log/fir_log_side",
+    "rings": "traverse:block/log/fir_log_end"
+	}
+}

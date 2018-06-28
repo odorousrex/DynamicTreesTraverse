@@ -1,0 +1,16 @@
+[
+{
+  "modid": "dttraverse",
+  "name": "Dynamic Trees for Traverse",
+  "description": "Replaces the trees added by Traverse with dynamic versions.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Odorousrex"],
+  "credits": "Mangoose3039 and Ferreusveritas, without their code examples I never would've gotten this far. Prospector for making Traverse, a vanilla style biomes mod.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

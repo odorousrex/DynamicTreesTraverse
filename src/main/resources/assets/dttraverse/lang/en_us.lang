@@ -1,0 +1,12 @@
+item.autumn_brownseed.name=Brown Autumn Acorn
+item.autumn_redseed.name=Red Autumn Acorn
+item.autumn_orangeseed.name=Orange Autumn Acorn
+item.autumn_yellowseed.name=Yellow Autumn Catchkin
+item.firseed.name=Fir Seed
+
+tile.autumn_brown_leaves.name=Dynamic Brown Leaves
+tile.autumn_red_leaves.name=Dynamic Red Leaves
+tile.autumn_yellow_leaves.name=Dynamic Yellow Leaves
+tile.autumn_orange_leaves.name=Dynamic Orange Leaves
+tile.fir_leaves.name=Dynamic Fir Leaves
+tile.dttraverse:firbranch.name=Dynamic Fir Tree
