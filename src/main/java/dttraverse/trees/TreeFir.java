@@ -89,7 +89,7 @@ public class TreeFir extends TreeFamily {
         }
 
         @Override
-        public void postGeneration(World world, BlockPos rootPos, Biome biome, int radius, List<BlockPos> endPoints, SafeChunkBounds safeBounds) {
+        public void postGeneration(World world, BlockPos rootPos, Biome biome, int radius, List<BlockPos> endPoints, SafeChunkBounds safeBounds, IBlockState initialDirtState) {
             //Manually place the highest few blocks of the conifer since the leafCluster voxmap won't handle it
             BlockPos highest = Collections.max(endPoints, (a, b) -> a.getY() - b.getY());
             world.setBlockState(highest.up(1), leavesProperties.getDynamicLeavesState(4));
@@ -119,7 +119,7 @@ public class TreeFir extends TreeFamily {
 
     @Override
     public int getRadiusForCellKit(IBlockAccess blockAccess, BlockPos pos, IBlockState blockState, EnumFacing dir, BlockBranch branch) {
-        int radius = branch.getRadius(blockState, blockAccess, pos);
+        int radius = branch.getRadius(blockState);
         if(radius == 1) {
             if(blockAccess.getBlockState(pos.down()).getBlock() == branch) {
                 return 128;
