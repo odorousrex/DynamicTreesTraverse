@@ -26,7 +26,7 @@ public class BiomeDataBasePopulator implements IBiomeDataBasePopulator {
     }
 
     @Override
-    public void populate() {
+    public void populate(BiomeDataBase dataBase) {
 
         //Traverse trees
         fir = TreeRegistry.findSpecies(new ResourceLocation(DynamicTreesTraverse.MODID, "fir"));
