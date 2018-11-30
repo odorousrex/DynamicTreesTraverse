@@ -148,14 +148,7 @@ public class ModContent {
         TreeFamily firTree = new TreeFir();
         Collections.addAll(trees, firTree);
         trees.forEach(tree -> tree.registerSpecies(Species.REGISTRY));
-
-        registry.registerAll(
-                TreeRegistry.findSpecies(new ResourceLocation(DynamicTreesTraverse.MODID, "autumn_yellow")).getDynamicSapling().getBlock(),
-                TreeRegistry.findSpecies(new ResourceLocation(DynamicTreesTraverse.MODID, "autumn_orange")).getDynamicSapling().getBlock(),
-                TreeRegistry.findSpecies(new ResourceLocation(DynamicTreesTraverse.MODID, "autumn_red")).getDynamicSapling().getBlock(),
-                TreeRegistry.findSpecies(new ResourceLocation(DynamicTreesTraverse.MODID, "autumn_brown")).getDynamicSapling().getBlock()
-        );
-
+        
         ArrayList<Block> treeBlocks = new ArrayList<>();
         trees.forEach(tree -> tree.getRegisterableBlocks(treeBlocks));
         treeBlocks.addAll(LeavesPaging.getLeavesMapForModId(DynamicTreesTraverse.MODID).values());

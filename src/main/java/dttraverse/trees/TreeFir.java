@@ -1,8 +1,5 @@
 package dttraverse.trees;
 
-import java.util.List;
-
-import com.ferreusveritas.dynamictrees.blocks.BlockDynamicSapling;
 import com.ferreusveritas.dynamictrees.systems.GrowSignal;
 import com.ferreusveritas.dynamictrees.systems.featuregen.FeatureGenConiferTopper;
 import com.ferreusveritas.dynamictrees.trees.Species;
@@ -33,9 +30,7 @@ public class TreeFir extends TreeFamily {
 			super(treeFamily.getName(), treeFamily, ModContent.firLeavesProperties);
 			
 			setBasicGrowingParameters(0.3f, 16.0f, 3, 3, 0.9f);
-			
-			setDynamicSapling(new BlockDynamicSapling("firsapling").getDefaultState());
-			
+						
 			envFactor(BiomeDictionary.Type.HOT, 0.50f);
 			envFactor(BiomeDictionary.Type.DRY, 0.25f);
 			envFactor(BiomeDictionary.Type.WET, 0.75f);
@@ -104,12 +99,6 @@ public class TreeFir extends TreeFamily {
 	@Override
 	public void createSpecies() {
 		setCommonSpecies(new SpeciesFir(this));
-	}
-	
-	@Override
-	public List<Block> getRegisterableBlocks(List<Block> blockList) {
-		blockList.add(getCommonSpecies().getDynamicSapling().getBlock());
-		return super.getRegisterableBlocks(blockList);
 	}
 	
 }

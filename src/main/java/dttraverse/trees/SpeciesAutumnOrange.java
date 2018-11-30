@@ -1,13 +1,14 @@
 package dttraverse.trees;
 
+import java.util.Random;
+
 import com.ferreusveritas.dynamictrees.ModBlocks;
 import com.ferreusveritas.dynamictrees.api.TreeHelper;
-import com.ferreusveritas.dynamictrees.blocks.BlockDynamicSaplingRare;
 import com.ferreusveritas.dynamictrees.trees.SpeciesRare;
 import com.ferreusveritas.dynamictrees.trees.TreeFamily;
+
 import dttraverse.DynamicTreesTraverse;
 import dttraverse.ModContent;
-import net.minecraft.init.Biomes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.EnumSkyBlock;
@@ -16,17 +17,13 @@ import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 import prospector.traverse.world.TraverseWorld;
 
-import java.util.Random;
-
 public class SpeciesAutumnOrange extends SpeciesRare {
 
     public SpeciesAutumnOrange(TreeFamily treeFamily) {
         super(new ResourceLocation(DynamicTreesTraverse.MODID, "autumn_orange"), treeFamily, ModContent.autumnOrangeLeavesProperties);
 
         setBasicGrowingParameters(0.3f, 12.0f, upProbability, lowestBranchHeight, 0.8f);
-
-        setDynamicSapling(new BlockDynamicSaplingRare("autumn_orangesapling").getDefaultState());
-
+        
         envFactor(BiomeDictionary.Type.HOT, 0.50f);
         envFactor(BiomeDictionary.Type.DRY, 0.50f);
         envFactor(BiomeDictionary.Type.FOREST, 1.05f);

@@ -1,0 +1,7 @@
+{   "parent": "dynamictrees:block/sapling",
+    "textures": {
+        "particle": "traverse:block/leaves/fir_leaves",
+        "log": "traverse:block/log/fir_log_side",
+        "leaves": "traverse:block/leaves/fir_leaves"
+    }
+}
