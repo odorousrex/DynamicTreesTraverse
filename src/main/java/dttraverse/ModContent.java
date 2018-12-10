@@ -7,6 +7,7 @@ import com.ferreusveritas.dynamictrees.ModConstants;
 import com.ferreusveritas.dynamictrees.ModItems;
 import com.ferreusveritas.dynamictrees.ModRecipes;
 import com.ferreusveritas.dynamictrees.api.TreeRegistry;
+import com.ferreusveritas.dynamictrees.api.WorldGenRegistry.BiomeDataBasePopulatorRegistryEvent;
 import com.ferreusveritas.dynamictrees.api.client.ModelHelper;
 import com.ferreusveritas.dynamictrees.api.treedata.ILeavesProperties;
 import com.ferreusveritas.dynamictrees.blocks.LeavesPaging;
@@ -20,6 +21,7 @@ import dttraverse.trees.SpeciesAutumnOrange;
 import dttraverse.trees.SpeciesAutumnRed;
 import dttraverse.trees.SpeciesAutumnYellow;
 import dttraverse.trees.TreeFir;
+import dttraverse.worldgen.BiomeDataBasePopulator;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.state.IBlockState;
@@ -49,6 +51,11 @@ public class ModContent {
     public static ILeavesProperties firLeavesProperties, autumnYellowLeavesProperties, autumnOrangeLeavesProperties, autumnRedLeavesProperties, autumnBrownLeavesProperties;
     public static ArrayList<TreeFamily> trees = new ArrayList<TreeFamily>();
 
+	@SubscribeEvent
+	public static void registerDataBasePopulators(final BiomeDataBasePopulatorRegistryEvent event) {
+		event.register(new BiomeDataBasePopulator());
+	}
+    
     @SubscribeEvent
     public static void registerBlocks(final RegistryEvent.Register<Block> event) {
         IForgeRegistry<Block> registry = event.getRegistry();
