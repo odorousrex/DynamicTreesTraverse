@@ -16,8 +16,8 @@ public class DynamicTreesTraverse {
 	public static final String MODID = "dttraverse";
 	public static final String NAME = "Dynamic Trees Traverse";
 	//public static final String VERSION = "@VERSION@";
-	public static final String VERSION = "1.4";
-	public static final String DEPENDENCIES = "required-after:dynamictrees@[1.12.2-0.7.7e,);required-after:traverse";
+	public static final String VERSION = "1.4.1e";
+	public static final String DEPENDENCIES = "required-after:dynamictrees@[1.12.2-0.9.1e,);required-after:traverse";
 	
 	@Mod.Instance
 	public static DynamicTreesTraverse instance;
