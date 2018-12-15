@@ -1,8 +1,8 @@
-item.autumn_brownseed.name=Brown Autumn Acorn
-item.autumn_redseed.name=Red Autumn Acorn
-item.autumn_orangeseed.name=Orange Autumn Acorn
-item.autumn_yellowseed.name=Yellow Autumn Catchkin
-item.firseed.name=Fir Seed
+item.dttraverse:autumn_brownseed.name=Brown Autumn Acorn
+item.dttraverse:autumn_redseed.name=Red Autumn Acorn
+item.dttraverse:autumn_orangeseed.name=Orange Autumn Acorn
+item.dttraverse:autumn_yellowseed.name=Yellow Autumn Catchkin
+item.dttraverse:firseed.name=Fir Seed
 
 tile.autumn_brown_leaves.name=Dynamic Brown Leaves
 tile.autumn_red_leaves.name=Dynamic Red Leaves
