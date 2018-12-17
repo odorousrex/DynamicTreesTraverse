@@ -16,8 +16,7 @@ import prospector.traverse.world.TraverseWorld;
 
 public class BiomeDataBasePopulator implements IBiomeDataBasePopulator {
 
-    private Species fir, autumn_yellow, autumn_orange, autumn_red, autumn_brown,
-    apple, jungle, spruce, birch, oak, acacia, swamp, darkoak, cactus;
+    private Species fir, autumn_yellow, autumn_orange, autumn_red, autumn_brown, birch, oak, acacia, swamp, darkoak, cactus;
 
     @Override
     public void populate(BiomeDataBase biomeDataBase) {
@@ -30,9 +29,6 @@ public class BiomeDataBasePopulator implements IBiomeDataBasePopulator {
         autumn_yellow = TreeRegistry.findSpecies(new ResourceLocation(DynamicTreesTraverse.MODID, "autumn_yellow"));
 
         //Vanilla trees
-        apple = TreeRegistry.findSpecies(new ResourceLocation(ModConstants.MODID, "oakapple"));
-        jungle = TreeRegistry.findSpecies(new ResourceLocation(ModConstants.MODID, "jungle"));
-        spruce = TreeRegistry.findSpecies(new ResourceLocation(ModConstants.MODID, "spruce"));
         birch = TreeRegistry.findSpecies(new ResourceLocation(ModConstants.MODID, "birch"));
         oak = TreeRegistry.findSpecies(new ResourceLocation(ModConstants.MODID, "oak"));
         acacia = TreeRegistry.findSpecies(new ResourceLocation(ModConstants.MODID, "acacia"));
@@ -114,33 +110,17 @@ public class BiomeDataBasePopulator implements IBiomeDataBasePopulator {
             }
         });
     }
-
+    
     private void addSpeciesSelector(BiomeDataBase dbase, Biome biome, BiomePropertySelectors.ISpeciesSelector selector) {
         dbase.setSpeciesSelector(biome, selector, BiomeDataBase.Operation.REPLACE);
     }
-
-    private BiomePropertySelectors.IChanceSelector rand(float threshhold) {
-        return (rnd, spc, rad) -> rnd.nextFloat() < threshhold ? BiomePropertySelectors.EnumChance.OK : BiomePropertySelectors.EnumChance.CANCEL;
-    }
-
+    
     private void addDensitySelector(BiomeDataBase dbase, Biome biome, BiomePropertySelectors.IDensitySelector selector) {
             dbase.setDensitySelector(biome, selector, BiomeDataBase.Operation.REPLACE);
     }
-
-    private BiomePropertySelectors.IDensitySelector scale() {
-        return (rnd, nd) -> nd;
-    }
-
+    
     private BiomePropertySelectors.IDensitySelector scale(double factor1) {
         return (rnd, nd) -> nd * factor1;
-    }
-
-    private BiomePropertySelectors.IDensitySelector scale(double factor1, double addend) {
-        return (rnd, nd) -> (nd * factor1) + addend;
-    }
-
-    private BiomePropertySelectors.IDensitySelector scale(double factor1, double addend, double factor2) {
-        return (rnd, nd) -> ((nd * factor1) + addend) * factor2;
     }
     
 }
